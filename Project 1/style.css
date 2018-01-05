@@ -1,0 +1,51 @@
+body{
+	background: black;
+}
+.container{
+    width:100%;
+    overflow:hidden;
+    display:block;
+    height: 400px;
+    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.videoContainer{
+    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+}
+#bomb{
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+.textOverlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	color: white;
+	width: 100%;
+	height: 300px;
+	line-height: 150px;
+}
+#by{
+	margin-top: -100px;
+	font-size: 30px;
+}
+.centerAligned{
+	font-size: 50px;
+	margin: auto;
+	text-align: center;
+	font-family: 'Rock Salt', cursive;
+	text-shadow: 0px 0px 7px black;
+}
+.lyrics{
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	font-family:'Gloria Hallelujah', cursive;
+}
+.line1{
+
+}
