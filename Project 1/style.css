@@ -1,12 +1,58 @@
 body{
-	background: black;
+	 background: linear-gradient(black 70%,#633d03);
+	 padding-bottom: 60px;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+@import "animation";
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
+#glitchy{
+  overflow: hidden;
+  font-family: "Oswald";
+  font-size: 100px;
+  display: inline-block;
+  overflow: hidden;
+  color: white;
+  text-shadow: 0px 0px 3px #eee, 5px 5px 2px teal, -5px -2px 2px mix(black,red,50);
+  font-weight: 400;
+  @include transform(skewX(0deg));
+  @include animation(shift 4s ease-in-out infinite alternate);
+}
+@include keyframes(shift){
+  0%,40%, 44%, 58%, 61%, 65%,69%,73%,100%{
+    @include transform(skewX(0deg))
+  }
+  41%{
+    @include transform(skewX(10deg));
+  }
+  42%{
+    @include transform(skewX(-10deg));
+  }
+  59%{
+    @include transform(skewX(40deg) skewY(10deg));
+  }
+  60%{
+    @include transform(skewX(-40deg) skewY(-10deg));
+  }
+  63%{
+    @include transform(skewX(10deg) skewY(-5deg));
+  }
+  70%{
+    @include transform(skewX(-50deg) skewY(-20deg));
+  }
+  71%{
+    @include transform(skewX(10deg) skewY(-10deg));
+  }
 }
 .container{
     width:100%;
     overflow:hidden;
     display:block;
     height: 400px;
-    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: -webkit-gradient(linear, left 60%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
 .videoContainer{
     -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
@@ -41,11 +87,68 @@ body{
 	text-shadow: 0px 0px 7px black;
 }
 .lyrics{
-	font-size: 50px;
+	margin-top: -50px;
 	text-align: center;
+	justify-content: center;
 	color: white;
 	font-family:'Gloria Hallelujah', cursive;
 }
 .line1{
+	font-size: 50px;
+	width:100%;
+	align-items: flex-start;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#num1{
+	width: 50%;
+	justify-content: left;
+}
+#num2{
+}
+.line2{
+	font-size: 60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0;
+}
+#nothing{
+	font-family: 'Roboto Mono', monospace;
+	color: black;
+	text-shadow: 0px 0px 8px white;
+}
+.grow:hover
+{
+        -webkit-transform: scale(3);
+        -ms-transform: scale(3);
+        transform: scale(3);
+        text-shadow: 0px 0px 30px black;
+}
+#everything{
+	font-family: 'Bungee', cursive;
+	display: inline-block;
+}
+.line3{
+	font-size: 60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0;
 
+}
+#melodramatic{
+	display: inline-block;
+	font-family: 'Vollkorn SC', serif;
+}
+.rotate:hover{
+        -webkit-transform: rotateZ(-180deg);
+        -ms-transform: rotateZ(-180deg);
+        transform: rotateZ(-180deg);
+        
+}
+
+.line4{
+	font-size: 60px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0;
 }
