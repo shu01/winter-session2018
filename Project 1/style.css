@@ -6,47 +6,6 @@ p{
 	margin: 0;
 	padding: 0;
 }
-@import "animation";
-
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
-#glitchy{
-  overflow: hidden;
-  font-family: "Oswald";
-  font-size: 100px;
-  display: inline-block;
-  overflow: hidden;
-  color: white;
-  text-shadow: 0px 0px 3px #eee, 5px 5px 2px teal, -5px -2px 2px mix(black,red,50);
-  font-weight: 400;
-  @include transform(skewX(0deg));
-  @include animation(shift 4s ease-in-out infinite alternate);
-}
-@include keyframes(shift){
-  0%,40%, 44%, 58%, 61%, 65%,69%,73%,100%{
-    @include transform(skewX(0deg))
-  }
-  41%{
-    @include transform(skewX(10deg));
-  }
-  42%{
-    @include transform(skewX(-10deg));
-  }
-  59%{
-    @include transform(skewX(40deg) skewY(10deg));
-  }
-  60%{
-    @include transform(skewX(-40deg) skewY(-10deg));
-  }
-  63%{
-    @include transform(skewX(10deg) skewY(-5deg));
-  }
-  70%{
-    @include transform(skewX(-50deg) skewY(-20deg));
-  }
-  71%{
-    @include transform(skewX(10deg) skewY(-10deg));
-  }
-}
 .container{
     width:100%;
     overflow:hidden;
@@ -91,14 +50,14 @@ p{
 	text-align: center;
 	justify-content: center;
 	color: white;
-	font-family:'Gloria Hallelujah', cursive;
+	font-family:'Cabin Sketch', cursive;
 }
 .line1{
 	font-size: 50px;
 	width:100%;
 	align-items: flex-start;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 #num1{
 	width: 50%;
@@ -108,8 +67,8 @@ p{
 }
 .line2{
 	font-size: 60px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	padding: 0;
 }
 #nothing{
@@ -119,9 +78,9 @@ p{
 }
 .grow:hover
 {
-        -webkit-transform: scale(3);
-        -ms-transform: scale(3);
-        transform: scale(3);
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+        transform: scale(2);
         text-shadow: 0px 0px 30px black;
 }
 #everything{
@@ -130,8 +89,8 @@ p{
 }
 .line3{
 	font-size: 60px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	padding: 0;
 
 }
@@ -145,10 +104,17 @@ p{
         transform: rotateZ(-180deg);
         
 }
+#glitchy{
+	font-family: 'Libre Barcode 39 Text', cursive;
+	font-size: 80px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+}
 
 .line4{
 	font-size: 60px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	padding: 0;
 }
