@@ -10,12 +10,17 @@ p{
     width:100%;
     overflow:hidden;
     display:block;
-    height: 400px;
-    -webkit-mask-image: -webkit-gradient(linear, left 60%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    height: 300px;
+    margin-bottom: -30px;
+    -webkit-mask-image: -webkit-gradient(linear, left 80%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
 .videoContainer{
     -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
+.video{
+	display: block;
+	text-align:center;
+	margin-top: -30px;
 }
 #bomb{
 	margin-left: auto;
@@ -46,7 +51,7 @@ p{
 	text-shadow: 0px 0px 7px black;
 }
 .lyrics{
-	margin-top: -50px;
+	margin-top: 50px;
 	text-align: center;
 	justify-content: center;
 	color: white;
