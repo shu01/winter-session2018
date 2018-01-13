@@ -17,6 +17,25 @@ function drive() {
 	el.setAttribute('src', 'driving.png');
 	var body = document.getElementById('dashbox');
 	body.style.backgroundImage = 'url("activebg.png")';
-	setTimeout(stopDrive, 10000);
+	///setTimeout(stopDrive, 10000);
 }
-window.addEventListener('scroll',drive, true);
+///window.addEventListener('scroll',drive, true);
+
+(function( $ ) {
+	$(function() {
+		var $output = $( "#output" ),
+			scrolling = "<span id='scrolling'>Scrolling</span>",
+			stopped = "<span id='stopped'>Stopped</span>";
+
+		    $( window ).scroll(function() {
+		    	drive();
+    			clearTimeout( $.data( this, "scrollCheck" ) );
+    			$.data( this, "scrollCheck", setTimeout(function() {
+    				stopDrive();
+    			}, 250) );
+
+    		});
+
+	});
+
+})( jQuery );
