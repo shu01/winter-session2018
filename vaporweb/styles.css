@@ -3,9 +3,8 @@ body{
 }
 #dashbox{
 	position:absolute;
-	height:100vh;
-	width: auto;
-	background: url("bg.png") no-repeat center fixed;
+	height:100vh;background: url("inactivebg.png") no-repeat center fixed
+	;
 	-webkit-background-size: cover; /* For WebKit*/
     -moz-background-size: cover;    /* Mozilla*/
     -o-background-size: cover;      /* Opera*/
@@ -15,8 +14,4 @@ body{
 	position:flex;
 	height:100%;
 	justify-content: flex-end;	
-}
-}
-#inactive{
-
 }
