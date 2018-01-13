@@ -1,4 +1,5 @@
 var driving = false;
+var element = document.querySelector('#dashbox');
 
 function hover(element) {
     element.setAttribute('src', 'active.png');
@@ -16,7 +17,7 @@ function drive() {
 	var el = document.getElementById("inactive");
 	el.setAttribute('src', 'driving.png');
 	var body = document.getElementById('dashbox');
-	body.style.backgroundImage = 'url("activebg.png")';
+	body.style.backgroundImage = 'url("activebg.gif")';
 	///setTimeout(stopDrive, 10000);
 }
 ///window.addEventListener('scroll',drive, true);
