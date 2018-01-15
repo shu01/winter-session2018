@@ -3,12 +3,13 @@ body{
 	color: white;
 }
 #dashbox{
-	height:100vh;background: url("inactivebg.png") no-repeat center fixed
-	;
+	height:100vh;
+	background: url("inactivebg.png") no-repeat center fixed;
 	-webkit-background-size: cover; /* For WebKit*/
     -moz-background-size: cover;    /* Mozilla*/
     -o-background-size: cover;      /* Opera*/
     background-size: cover;  
+    width: 100vw
 }
 #inactive{
 	position:absolute;
@@ -16,9 +17,19 @@ body{
 	height: 100vh;
 	
 }
-#image{
-	position: fixed;
-	height:200px;
+.imag{
+	background: url("img/1.jpg") no-repeat center fixed;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	height: 300px;
+}
+#zero{
 	opacity: 0;
-
+}
+#fifty{
+	opacity: .5;
+}
+#full{
+	opacity: 0;
 }
