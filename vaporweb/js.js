@@ -1,19 +1,12 @@
 var driving = false;
 var element = document.querySelector('#dashbox');
 var audio = new Audio('music.mp3');
-var activeImages = [];
+var isdriving = false;
+var interval;
 
 function genNum() {
-    var x = Math.floor((Math.random() * 10) + 1);
+    var x = Math.floor((Math.random() * 50) + 1);
     return x;
-}
-function genX() {
-	var x = Math.floor((Math.random() * 700) + 1);
-	return x;
-}
-function genY() {
-	var y = Math.floor((Math.random() * 1000) + 1);
-	return y;
 }
 function randLoc(){
 	var x = genNum();
@@ -40,50 +33,36 @@ function drive() {
 	body.style.backgroundImage = 'url("activebg.gif")';
 	audio.play();
 }
-function newImg(){
-	var rl = randLoc();
-	var elem = document.getElementsByClassName("imag");
-	elem.backgroundImage = 'url("img/2.jpg")';
+function checkImageState(){
+	if (!isdriving){
+		clearInterval(interval);
+		interval = setInterval(function() {
+    					$( "#image" ).attr('src',randLoc());
+    					console.log("looped");
+		    		}, 5000);
+	}
+	if (isdriving){
+		$( "#image" ).attr('class',"fadeInAndOut");
+	}
 }
-/*function newImg(){
-	var rl = randLoc();
-	var elem = document.createElement("img");
-	elem.setAttribute("src", "img/1.jpg");
-	elem.setAttribute("class", "image");
-	setTimeout(function() {
-    	document.getElementById("dashbox").appendChild(elem);
-    	}, 100);
+function changeImg(){
+	$( "#image" ).attr('src',randLoc());
 }
 
-/*
-}
-function fadeInInc(opacity){
-	var elem = document.getElementById("image");
-	opacity = opacity +.10;
-	return opacity;
-}
-function fadeIn(){
-	var elem = document.getElementById("image");
-	var opacity = 0; 
-	if (opacity <= 1){
-		var newOp =fadeInInc(opacity)}
-	opacity = newOp
-	elem.style.opacity = newOp;
-}
-*/
 (function( $ ) {
 	$(function() {
-		var $output = $( "#output" );
-
 		    $( window ).scroll(function() {
 		    	drive();
-		    	newImg();
-		    	window.setInterval(function(){newImg()}, 5000);
+		    	checkImageState();
+		    	isdriving = true;
     			clearTimeout( $.data( this, "scrollCheck" ) );
-    			$.data( this, "scrollCheck", setTimeout(function() {
-    				stopDrive();
-    			}, 250) );
-
+    			$.data( this, "scrollCheck", 
+    				setTimeout(function() {
+    					$( "#image" ).removeClass("fadeInAndOut");
+    					stopDrive(); 
+    					isdriving = false;
+		    			checkImageState();
+		    		}, 250));
     		});
 	});
 })( jQuery );

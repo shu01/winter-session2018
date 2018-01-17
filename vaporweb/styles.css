@@ -3,6 +3,7 @@ body{
 	color: white;
 }
 #dashbox{
+	position:absolute;
 	height:100vh;
 	background: url("inactivebg.png") no-repeat center fixed;
 	-webkit-background-size: cover; /* For WebKit*/
@@ -17,19 +18,22 @@ body{
 	height: 100vh;
 	
 }
-.imag{
-	background: url("img/1.jpg") no-repeat center fixed;
-	position: absolute;
-	top: 100px;
-	left: 100px;
-	height: 300px;
-}
-#zero{
+#image{
 	opacity: 0;
+	position: fixed;
+	bottom: 35%;
+	left: 50%;
+	height: 200px;
 }
-#fifty{
-	opacity: .5;
+
+.fadeInAndOut{
+	animation-name: fades;
+	animation-duration: 5s;
+	animation-iteration-count:infinite;
 }
-#full{
-	opacity: 0;
+
+@keyframes fades {
+    0%   {opacity: 0; height: 0%;}
+    70%  {opacity:100; height: 30%;}
+    100% {opacity: 0; height: 50%;}
 }
