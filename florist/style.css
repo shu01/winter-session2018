@@ -6,6 +6,7 @@ body{
 	height = window.innerHeight;
 }
 .container{
+	display: flex;
     width: 100%;
     margin-left: 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.75);
@@ -15,6 +16,16 @@ body{
 	left: 0px; 
 	top: 0px;
 	width: auto;
-
+}
+p{ 
+	right: 0px; 
+	bottom: 0px;
+	color: grey;
+	position: absolute;
+	text-align: right;
+	margin: 10px;
+	font-size: 17pt;
+	text-shadow: 0 0 6px white,0 0 6px white,0 0 6px white;
+	font-family: 'Tangerine', cursive;
 
 }

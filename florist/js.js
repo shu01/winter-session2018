@@ -15,7 +15,7 @@ function numGen(){
 
 function placeFlower(event){
 	var x = event.clientX - 25;
-	var y = event.clientY - 50;
+	var y = event.clientY - 30;
 	var randnum = String(numGen());
 	img.src = String("flowers/"+randnum+".png");
 	var sound = new Audio('sounds/'+randnum+'.wav');
