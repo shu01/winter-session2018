@@ -6,23 +6,25 @@ ctx.canvas.height = window.innerHeight;
 var img = new Image();
 var imgW = (img.clientWidth);
 var imgH = (img.clientHeight);
-img.src = "flowers/0.png"
 
 
-function genImgLoc(){
-	var randNum = Math.floor(Math.random() * 7);
-	img.src = String("flowers/"+String(randNum)+".png");
+function numGen(){
+	var num = Math.floor(Math.random() * 9);
+	return num;
 }
 
 function placeFlower(event){
 	var x = event.clientX - 25;
-	var y = event.clientY - 10;
+	var y = event.clientY - 50;
+	var randnum = String(numGen());
+	img.src = String("flowers/"+randnum+".png");
+	var sound = new Audio('sounds/'+randnum+'.wav');
+	sound.play()
     ctx.drawImage(img,x,y);
     console.log(img);
     console.log("works");
 }
 
 mathCanvas.onclick = function(event){
-	imgLoc = genImgLoc();
     placeFlower(event);
 };
