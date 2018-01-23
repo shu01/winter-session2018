@@ -19,7 +19,8 @@ function placeFlower(event){
 	var randnum = String(numGen());
 	img.src = String("flowers/"+randnum+".png");
 	var sound = new Audio('sounds/'+randnum+'.wav');
-	sound.play()
+	sound.play();
+	setInterval(function() { sound.play(); },(1000+1000*randnum));
     ctx.drawImage(img,x,y);
     console.log(img);
     console.log("works");
