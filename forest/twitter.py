@@ -2,6 +2,7 @@
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
+import json
 
 #Variables that contains the user credentials to access Twitter API 
 access_token = "958434177736740871-Zu1DYe88RpXruMDpJtHA2h1bCXodCdo"
@@ -13,7 +14,11 @@ consumer_secret = "ZnlXSLHPZouvovxtUQkXlnz4kUlFTJ0bmxbYWJqnAYPtpzlQ8o"
 class StdOutListener(StreamListener):
 
     def on_data(self, data):
-        print (data[10])
+        json_load = json.loads(data)
+        texts = json_load['text']
+        coded = texts.encode('utf-8')
+        s = str(coded)
+        print(s[2:-1])
         return True
 
     def on_error(self, status):
