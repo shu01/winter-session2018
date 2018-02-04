@@ -1,8 +1,9 @@
 var ss = [];
+var oss = [];
 
-bg = new Audio('noise/ambience.mp3');
-bg.loop = true;
-bg.play();
+///bg = new Audio('noise/ambience.mp3');
+///bg.loop = true;
+///bg.play();
 
 a0 = new Audio('noise/0.mp3');
 a1 = new Audio('noise/1.mp3');
@@ -16,22 +17,24 @@ a7 = new Audio('noise/7.mp3');
 var sounds = [a0,a1,a2,a3,a4,a5,a6,a7];
 
 function checkFile(index){
-	for (var s in sounds){
-		if (s == index){
-			s.play;
-			console,log(s);
-		}
-	}
+	var num = index.charAt(3);
+	var indexNum = parseInt(num);
+	var selected = sounds[indexNum];
+	selected.play();
+	selected.loop = false;
+	console.log("done")
 }
 
 function loadlink(){
     $('#data').load('data.txt',function () {
-         $(this).unwrap();
-         var str = $( "p:first" ).text();
-         ss = str.split(",");
-         last = (ss[ss.length-1]);
-         checkFile(last);
-
+        $(this).unwrap();
+        var str = $( "p:first" ).text();
+        ss = str.split(",");
+        last = (ss[ss.length-1]);
+        if (ss.length != oss.length){
+            checkFile(last);
+            oss = ss;
+        }
     });
 }
 
