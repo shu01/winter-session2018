@@ -1,0 +1,11 @@
+body{
+	background:url("forest.jpg");
+	left: 0px; 
+	top: 0px;
+	width = window.innerWidth;
+	height = window.innerHeight;
+}
+
+#data{
+	display: none;
+}
