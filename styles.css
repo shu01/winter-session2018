@@ -1,0 +1,13 @@
+body{
+  text-align: center;
+  list-style-position: inside;
+}
+
+ol{
+  margin-left: -50px;
+}
+
+h2{
+  margin-top: 60px;
+  margin-bottom: 20px;
+}

@@ -22,7 +22,7 @@ function checkFile(index){
 	var selected = sounds[indexNum];
 	selected.play();
 	selected.loop = false;
-	console.log("done")
+	console.log("index")
 }
 
 function loadlink(){
@@ -31,6 +31,7 @@ function loadlink(){
         var str = $( "p:first" ).text();
         ss = str.split(",");
         last = (ss[ss.length-1]);
+        console.log("done")
         if (ss.length != oss.length){
             checkFile(last);
             oss = ss;

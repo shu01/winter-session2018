@@ -1,0 +1,127 @@
+body{
+	 background: linear-gradient(black 70%,#633d03);
+	 padding-bottom: 60px;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+.container{
+    width:100%;
+    overflow:auto;
+    display:block;
+    height: 300px;
+    margin-bottom: -30px;
+    -webkit-mask-image: -webkit-gradient(linear, left 80%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.videoContainer{
+    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.video{
+	display: block;
+	text-align:center;
+	margin-top: -10px;
+}
+#bomb{
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+.textOverlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	color: white;
+	width: 100%;
+	height: 300px;
+	line-height: 150px;
+}
+#by{
+	margin-top: -100px;
+	font-size: 30px;
+}
+.centerAligned{
+	font-size: 50px;
+	margin: auto;
+	text-align: center;
+	font-family: 'Rock Salt', cursive;
+	text-shadow: 0px 0px 7px black;
+}
+.lyrics{
+	margin-top: 50px;
+	text-align: center;
+	justify-content: center;
+	color: white;
+	font-family:'Cabin Sketch', cursive;
+}
+.line1{
+	font-size: 50px;
+	width:100%;
+	align-items: flex-start;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#num1{
+	width: 50%;
+	justify-content: left;
+}
+#num2{
+}
+.line2{
+	font-size: 60px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+}
+#nothing{
+	font-family: 'Roboto Mono', monospace;
+	color: black;
+	text-shadow: 0px 0px 8px white;
+}
+.grow:hover
+{
+        -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+        transform: scale(2);
+        text-shadow: 0px 0px 30px black;
+}
+#everything{
+	transition: transform .5s ease-in;
+	font-family: 'Bungee', cursive;
+	display: inline-block;
+}
+.line3{
+	font-size: 60px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+
+}
+#melodramatic{
+	transition: transform 1s ease-in;
+	display: inline-block;
+	font-family: 'Vollkorn SC', serif;
+}
+.rotate:hover{
+        -webkit-transform: rotateZ(-36deg);
+        -ms-transform: rotateZ(-36deg);
+        transform: rotateZ(-36deg);
+        
+}
+#glitchy{
+	font-family: 'Libre Barcode 39 Text', cursive;
+	font-size: 80px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+.line4{
+	font-size: 60px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+}
