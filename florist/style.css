@@ -29,3 +29,10 @@ p{
 	font-family: 'Tangerine', cursive;
 
 }
+@media print {
+	div#preloader, 
+	div#preloader img {
+		visibility: hidden;
+		display: none;
+		}
+	}
